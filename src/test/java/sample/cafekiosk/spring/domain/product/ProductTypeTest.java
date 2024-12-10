@@ -42,7 +42,6 @@ class ProductTypeTest {
     @DisplayName("상품 타입이 재고 관련 타입인지를 체크한다.")
     @CsvSource({"HANDMADE,false","BOTTLE,true","BAKERY,true"})
     @ParameterizedTest
-    @Test
     void containsStockType4(ProductType productType, boolean expected) {
         // when
         boolean result = ProductType.containsStockType(productType);
